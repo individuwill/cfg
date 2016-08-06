@@ -3,26 +3,29 @@
 set nocompatible
 filetype off
 
-set shell=/usr/local/bin/bash
+set shell=/bin/bash
+"set shell=/usr/local/bin/bash
 "set shell=/usr/local/bin/zsh
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/vundle'
 Plugin 'Shutnik/jshint2.vim'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'vim-scripts/taglist.vim'
-Plugin 'Glench/Vim-Jinja2-Syntax'
+"Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'tpope/vim-surround'
 Plugin 'tristen/vim-sparkup'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-Bundle 'fatih/vim-go'
+"Bundle 'fatih/vim-go'
 "Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
+let g:rustfmt_autosave = 1
 let g:ycm_confirm_extra_conf = 0
 
 " Configure vim-go plugin
