@@ -19,10 +19,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'tristen/vim-sparkup'
 "Plugin 'bling/vim-airline'
 Plugin 'kien/ctrlp.vim'
-"Bundle 'fatih/vim-go'
+Bundle 'fatih/vim-go'
 "Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
 "Bundle 'Valloric/YouCompleteMe'
 Plugin 'rust-lang/rust.vim'
+Plugin 'vimwiki/vimwiki'
 call vundle#end()
 
 let g:rustfmt_autosave = 1
@@ -52,7 +53,12 @@ let g:ctrlp_custom_ignore = {
 
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1 " show buffer tabs across top
-let g:vimwiki_list = [{'path': '$HOME/Dropbox/Will/Documents/vimwiki'}]
+let g:vimwiki_list = [{
+  \ 'path': '$HOME/Dropbox/Will/Notes/vimwiki',
+  \ 'path_html': '$HOME/Dropbox/Will/Notes/vimwiki_html',
+  \ 'syntax': 'markdown',
+  \ 'ext': '.mkd'
+\}]
 
 colorscheme desert "colorscheme elflord
 set background=dark

@@ -140,3 +140,6 @@ export LANG="en_US.UTF-8"
 #export HOMEBREW_GITHUB_API_TOKEN="d8efd8751ebbeaa8dbadf359aad764434aba524e"
 
 export SSLKEYLOGFILE=~/.sslkeylog.log
+
+export GOPATH=$HOME/dev/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:$HOME/.cargo/bin
