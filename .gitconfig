@@ -5,6 +5,7 @@
 	editor = vim
 	autocrlf = input
 	safecrlf = true
+  excludesfile = /Users/wsmith/.gitignore_global
 [merge]
 	tool = vimdiff
 [push]
@@ -21,3 +22,11 @@
 	required = true
 [credential]
 	helper = store
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/wsmith/.stCommitMsg
