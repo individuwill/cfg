@@ -18,3 +18,5 @@ alias aria='aria2c -k 2M -x 16 -s 16'
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 export EDITOR='vim'
 export LANG="en_US.UTF-8"
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
