@@ -19,4 +19,4 @@ export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 export EDITOR='vim'
 export LANG="en_US.UTF-8"
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/sbin:$PATH"
