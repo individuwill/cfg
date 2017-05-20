@@ -2,7 +2,7 @@
 # aliases
 alias yt='youtube-dl --external-downloader=aria2c --external-downloader-args "--conf-path=$HOME/.aria2/aria2.conf"'
 alias config="`which git` --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-alias ls='ls --color -h -Gp -F'
+alias ls='ls --color -h -p -F'
 alias p=ping
 alias t=traceroute
 alias tel=telnet
