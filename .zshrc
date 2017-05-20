@@ -1,17 +1,21 @@
-# Load up antigen
-source ~/.antigen_clone/antigen.zsh
-
-# Environment setting for powerline9k
+# Environment setting for powerline9k; must come before antigen is loaded
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history)
 # defaults
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
 #POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+
+# Load up antigen
+source $HOME/.antigen_clone/antigen.zsh
 
 # Bundles
 antigen use oh-my-zsh
 antigen bundle git
+antigen bundle gitfast
 antigen bundle vagrant
 
 antigen bundle zsh-users/zsh-syntax-highlighting
