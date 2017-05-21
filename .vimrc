@@ -3,28 +3,21 @@
 set nocompatible
 filetype off
 
-set shell=/bin/bash
+"set shell=/bin/bash
 "set shell=/usr/local/bin/bash
-"set shell=/usr/local/bin/zsh
+set shell=/usr/local/bin/zsh
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/vundle'
-Plugin 'Shutnik/jshint2.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'vim-scripts/taglist.vim'
-"Plugin 'Glench/Vim-Jinja2-Syntax'
-Plugin 'tpope/vim-surround'
-Plugin 'tristen/vim-sparkup'
-"Plugin 'bling/vim-airline'
-Plugin 'kien/ctrlp.vim'
-Bundle 'fatih/vim-go'
-"Bundle 'vim-scripts/Superior-Haskell-Interaction-Mode-SHIM'
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+
 "Bundle 'Valloric/YouCompleteMe'
-Plugin 'rust-lang/rust.vim'
-Plugin 'vimwiki/vimwiki'
-call vundle#end()
+call plug#end()
+" Execute ':PlugInstall' to install plugins
 
 let g:rustfmt_autosave = 1
 let g:ycm_confirm_extra_conf = 0
@@ -53,12 +46,6 @@ let g:ctrlp_custom_ignore = {
 
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1 " show buffer tabs across top
-let g:vimwiki_list = [{
-  \ 'path': '$HOME/Dropbox/Will/Notes/vimwiki',
-  \ 'path_html': '$HOME/Dropbox/Will/Notes/vimwiki_html',
-  \ 'syntax': 'markdown',
-  \ 'ext': '.mkd'
-\}]
 
 colorscheme desert "colorscheme elflord
 set background=dark
