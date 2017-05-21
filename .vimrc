@@ -8,12 +8,15 @@ filetype off
 set shell=/usr/local/bin/zsh
 
 call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-fugitive'
+Plug 'jmcantrell/vim-virtualenv'
 Plug 'scrooloose/nerdtree'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
 
 "Bundle 'Valloric/YouCompleteMe'
 call plug#end()
@@ -45,7 +48,7 @@ let g:ctrlp_custom_ignore = {
 \}
 
 let g:airline_powerline_fonts = 1
-"let g:airline#extensions#tabline#enabled = 1 " show buffer tabs across top
+let g:airline#extensions#tabline#enabled = 1 " show buffer tabs across top
 
 colorscheme desert "colorscheme elflord
 set background=dark
