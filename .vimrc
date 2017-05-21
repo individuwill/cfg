@@ -68,6 +68,8 @@ set softtabstop=2
 set expandtab
 set hidden " enable hiding buffers with changes un-unsaved
 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 "set lines=50 columns=120
 set cursorline
 " following 2 lines will highlight text after a certain length
