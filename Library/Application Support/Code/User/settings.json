@@ -1,0 +1,16 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "workbench.iconTheme": "vscode-icons",
+    "editor.cursorBlinking": "phase",
+    "editor.fontFamily": "SauceCodePro Nerd Font, SauceCodePro, InconsolataForPowerline Nerd Font, Inconsolata, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorStyle": "block",
+    "files.associations": {
+        "*.j2": "markdown"
+    },
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "SauceCodePro Nerd Font, SauceCodePro, InconsolataForPowerline Nerd Font, Inconsolata, Menlo, Monaco, 'Courier New', monospace"
+}
