@@ -7,7 +7,7 @@
     "editor.renderWhitespace": "boundary",
     "editor.cursorStyle": "block",
     "files.associations": {
-        "*.j2": "markdown"
+        "*.j2": "jinja"
     },
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
