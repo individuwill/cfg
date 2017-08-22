@@ -4,7 +4,8 @@ osc=no
 
 cache=4000
 
-hwdec=vda
+hwdec=videotoolbox-copy
+#hwdec=vda
 #vo=opengl-hq:icc-profile-auto:approx-gamma:icc-cache=~/.mpv/icc-cache
 #vo=corevideo
 
@@ -17,3 +18,6 @@ osd-bar-h=2
 #osd-border-size=1
 osd-color='#CCFFFFFF'
 #osd-border-color='#99000000'
+osd-playing-msg='${filename}'
+osd-font-size=30
+osd-duration=2500
