@@ -13,6 +13,7 @@ alias cask='brew cask'
 alias cv='rsync -vhr --progress'
 alias yt='youtube-dl --external-downloader=aria2c --external-downloader-args "--conf-path=$HOME/.aria2/aria2.conf"'
 alias aria='aria2c -k 2M -x 16 -s 16'
+alias sssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 # exports
 export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
