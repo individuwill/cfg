@@ -12,5 +12,6 @@
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontFamily": "SauceCodePro Nerd Font, SauceCodePro, InconsolataForPowerline Nerd Font, Inconsolata, Menlo, Monaco, 'Courier New', monospace"
+    "terminal.integrated.fontFamily": "SauceCodePro Nerd Font, SauceCodePro, InconsolataForPowerline Nerd Font, Inconsolata, Menlo, Monaco, 'Courier New', monospace",
+    "vim.disableAnnoyingNeovimMessage": true
 }
