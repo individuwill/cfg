@@ -16,9 +16,10 @@ alias aria='aria2c -k 2M -x 16 -s 16'
 alias sssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 # exports
-export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
+#export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 export EDITOR='vim'
 export LANG="en_US.UTF-8"
 export GOPATH="$HOME/go"
 
-export PATH="$HOME/bin:$GOPATH/bin:/usr/local/opt/coreutils/libexec/gnubin:/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/:/usr/local/sbin:/usr/local/opt/openssl/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/bin:$GOPATH/bin:/usr/local/opt/coreutils/libexec/gnubin:/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/:/usr/local/sbin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:$PATH"
+

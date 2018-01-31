@@ -1,3 +1,6 @@
+# Need to set term for SecureCRT
+export TERM="xterm-256color"
+
 # Environment setting for powerline9k; must come before antigen is loaded
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv virtualenv vcs)
