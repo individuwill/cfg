@@ -14,12 +14,23 @@ alias cv='rsync -vhr --progress'
 alias yt='youtube-dl --external-downloader=aria2c --external-downloader-args "--conf-path=$HOME/.aria2/aria2.conf"'
 alias aria='aria2c -k 2M -x 16 -s 16'
 alias sssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias grun='java org.antlr.v4.gui.TestRig'
 
 # exports
 #export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
 export EDITOR='vim'
 export LANG="en_US.UTF-8"
 export GOPATH="$HOME/go"
+export CLASSPATH=".:/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH"
 
-export PATH="$HOME/.cargo/bin:$HOME/bin:$GOPATH/bin:/usr/local/opt/coreutils/libexec/gnubin:/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/:/usr/local/sbin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/bin:$GOPATH/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/:/usr/local/sbin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:$PATH"
 
+# Completion for pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+# Completion for pipenv
+if command -v pipenv 1>/dev/null 2>&1; then
+  eval "$(pipenv --completion)"
+fi
