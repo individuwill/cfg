@@ -16,6 +16,7 @@ alias aria='aria2c -k 2M -x 16 -s 16'
 alias sssh='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 alias antlr4='java -Xmx500M -cp "/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
 alias grun='java org.antlr.v4.gui.TestRig'
+alias prp='pipenv run python'
 
 # exports
 #export VAGRANT_DEFAULT_PROVIDER=vmware_fusion
