@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 " Many settings discovered and copied from
 " http://amix.dk/vim/vimrc.html
 set nocompatible
@@ -17,6 +20,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
+Plug 'Yggdroot/indentLine'
 
 "Bundle 'Valloric/YouCompleteMe'
 call plug#end()
@@ -50,11 +54,12 @@ let g:ctrlp_custom_ignore = {
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1 " show buffer tabs across top
 
+"let g:indentLine_char = '|'
+
 colorscheme desert "colorscheme elflord
 set background=dark
 set t_Co=256
 
-set encoding=utf8
 set ffs=unix,dos,mac
 set autoread " detect when file changed externally
 
@@ -83,8 +88,8 @@ set title
 
 " config so that when using :set list command, white space is shown
 " use :set nolist to undo
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-
+"set list listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
+set list listchars=eol:¬,tab:»·,trail:~,extends:>,precedes:<
 set incsearch
 set hlsearch " highlight search results, use :nohlsearch to turn off
 let loaded_matchparen = 1 " disable highlighting matching parens
@@ -104,7 +109,9 @@ set laststatus=2 " always show status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ At:\ %l,\%c
 
 set mouse=a
-set ttymouse=xterm
+if !has('nvim')
+  set ttymouse=xterm
+endif
 set clipboard=unnamed
 """"""""""""""""""""""""""""""
 " Commands & Mappings
@@ -154,3 +161,4 @@ function! HasPaste()
 	en
 	return ''
 endfunction
+
