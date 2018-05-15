@@ -27,6 +27,12 @@ export CLASSPATH=".:/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH"
 
 export PATH="$HOME/.cargo/bin:$HOME/bin:$GOPATH/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/:/usr/local/sbin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:$PATH"
 
+#replace vim with nvim
+if command -v nvim 1>/dev/null 2>&1; then
+  alias vim='nvim'
+  alias vimdiff='nvim -d'
+  export EDITOR='nvim'
+fi
 # Completion for pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
