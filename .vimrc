@@ -55,6 +55,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1 " show buffer tabs across top
 
 "let g:indentLine_char = '|'
+let g:indentLine_noConcealCursor=""
+let g:indentLine_concealcursor = 0
+"autocmd InsertEnter *.json setlocal conceallevel=2 concealcursor=
+"autocmd InsertLeave *.json setlocal conceallevel=2 concealcursor=inc
 
 colorscheme desert "colorscheme elflord
 set background=dark
@@ -112,6 +116,7 @@ set mouse=a
 if !has('nvim')
   set ttymouse=xterm
 endif
+"let g:nvim_json_syntax_conceal = 0
 set clipboard=unnamed
 """"""""""""""""""""""""""""""
 " Commands & Mappings
