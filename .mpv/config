@@ -21,3 +21,4 @@ osd-color='#CCFFFFFF'
 osd-playing-msg='${filename}\n${playlist-pos}/${playlist-count}'
 osd-font-size=30
 osd-duration=2500
+input-right-alt-gr=no
