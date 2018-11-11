@@ -1,6 +1,6 @@
 
 # aliases
-alias yt='youtube-dl --external-downloader=aria2c --external-downloader-args "--conf-path=$HOME/.aria2/aria2.conf"'
+alias yt='youtube-dl -i --external-downloader=aria2c --external-downloader-args "--conf-path=$HOME/.aria2/aria2.conf"'
 alias config="`which git` --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias ls='ls --color -h -p -F'
 alias p=ping
@@ -25,7 +25,12 @@ export LANG="en_US.UTF-8"
 export GOPATH="$HOME/go"
 export CLASSPATH=".:/usr/local/lib/antlr-4.7.1-complete.jar:$CLASSPATH"
 
-export PATH="$HOME/.cargo/bin:$HOME/bin:$GOPATH/bin:/usr/local/texlive/2018/bin/x86_64-darwin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/:/usr/local/sbin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:$PATH"
+# for wireshark building
+export PATH="/usr/local/opt/gettext/bin:/usr/local/opt/libpcap/bin:$PATH"
+
+export PATH="$HOME/.cargo/bin:$HOME/bin:$GOPATH/bin:/usr/local/texlive/2018/bin/x86_64-darwin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/:/usr/local/sbin:/usr/local/opt/openssl/bin:/usr/local/opt/python/libexec/bin:/usr/local/share/pypy3:/usr/local/sbin:$HOME/.nimble/bin:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
 
 #replace vim with nvim
 if command -v nvim 1>/dev/null 2>&1; then
@@ -33,11 +38,13 @@ if command -v nvim 1>/dev/null 2>&1; then
   alias vimdiff='nvim -d'
   export EDITOR='nvim'
 fi
+
+## Completion for pipenv
+#if command -v pipenv 1>/dev/null 2>&1; then
+#  eval "$(pipenv --completion)"
+#fi
+
 # Completion for pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
-fi
-# Completion for pipenv
-if command -v pipenv 1>/dev/null 2>&1; then
-  eval "$(pipenv --completion)"
 fi
